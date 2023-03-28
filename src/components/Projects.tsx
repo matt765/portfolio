@@ -44,15 +44,22 @@ const projectsData = [
 export const Projects = () => {
   return (
     <>
+      <Flex id="projects" />
       <SectionTitle title="My recent projects" />
-      <Flex w="100%" justify="center" alignItems="center" mt="1.5rem" mb="-4rem">
+      <Flex
+        w="100%"
+        justify="center"
+        alignItems="center"
+        mt="1.5rem"
+        mb="-4rem"
+      >
         <Flex
           w="100%"
           wrap="nowrap"
           justify="flex-start"
           alignItems="center"
           direction="column"
-          gap={{ base: "0rem", "md": "3rem" }}
+          gap={{ base: "0rem", md: "3rem" }}
           px={{ sm: "1rem", "2xl": "5rem" }}
           // sx={{
           //   "& > :last-child": {
