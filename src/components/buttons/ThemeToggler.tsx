@@ -21,6 +21,7 @@ export const ThemeToggle = () => {
       alignItems="center"
       cursor="pointer"
       transition="0.3s"
+      zIndex="99999"
     >
       {colorMode === "light" ? (
         <SunIcon boxSize={5} />

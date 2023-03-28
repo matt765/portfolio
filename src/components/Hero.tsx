@@ -8,23 +8,23 @@ export const Hero = () => {
         w="90%"
         alignItems="center"
         justify="flex-start"
-        pb="2rem"
-        pl={{ base: "4%", md: "8%", lg: "7%", xl: "6vw", "2xl": "12vw" }}
+        pb={{ base: "5rem", xl: "2rem"}}
+        pl={{ base: "4%", md: "8%", lg: "11%", xl: "6vw", "2xl": "12vw" }}
       >
         <Flex direction="column" w="57rem" gap="1rem">
           <Flex>
             <Heading
               mb="1rem"
               as="h1"
-              fontSize={{ base: "2.4rem", md: "2.8rem", xl: "3.8rem" }}
+              fontSize={{ base: "2rem", md: "2.8rem", xl: "3.8rem" }}
             >
               Hello, my name is Matthew <br />
               I&apos;m
               <Text
                 as="span"
                 variant="titleColored"
-                ml="1.2rem"
-                fontSize={{ base: "2.4rem", md: "2.8rem", xl: "3.8rem" }}
+                ml="1.1rem"
+                fontSize={{ base: "2rem", md: "2.8rem", xl: "3.8rem" }}
               >
                 Front-End Developer
               </Text>

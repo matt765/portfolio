@@ -52,6 +52,7 @@ export const WebsiteBox = ({
         w={{ base: "100%", sm: "100%", xl: "60%" }}
         borderStyle="solid"
         borderWidth="1px"
+        zIndex="0"
         borderColor="grayBorder"
         borderRadius="6px"
         overflow="hidden"

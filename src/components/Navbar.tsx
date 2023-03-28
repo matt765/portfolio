@@ -49,6 +49,7 @@ export const Navbar = () => {
        bg="primaryBg"
       display={{ base: "none", lg: "flex" }}
       backdropFilter="blur(24px)"
+      
     >
       <Flex mb="2rem" ml="-1rem">
         <Image src="/logo.png" alt="" width={100} height={100} />
@@ -103,6 +104,7 @@ export const MobileNavbar = () => {
         px="1.5rem"
         py="0.3rem"
         alignItems="center"
+        zIndex="999"
       >
         <Flex py="0.5rem">
           <Image src="/logo.png" alt="" width={120} height={70} />
@@ -131,12 +133,12 @@ export const MobileNavbar = () => {
           <Flex w="1.3rem" h="1px" bg="rgb(255,255,255,0.5)"></Flex>
         </Flex>
       </Flex>
-      <AnimatePresence>
+   
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.1 }}
             exit={{ opacity: 0 }}
           >
             <Flex
@@ -154,6 +156,7 @@ export const MobileNavbar = () => {
               borderColor="rgb(255,255,255,0.1)"
               pt="2rem"
               display={{ base: "flex", lg: "none" }}
+              zIndex="99"
             >
               <MobileNavbarItem text="Home" color="coloredText" path="#home" />
               <MobileNavbarItem text="Services" path="#services" />
@@ -163,7 +166,7 @@ export const MobileNavbar = () => {
             </Flex>
           </motion.div>
         )}
-      </AnimatePresence>
+    
     </>
   );
 };

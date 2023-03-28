@@ -80,7 +80,7 @@ export const Services = () => {
       alignItems="center"
       direction="column"
       id="services"
-      mb="4rem"
+      mb="10rem"
     >
       <SectionTitle title="What I offer" />
       <Flex
@@ -90,6 +90,7 @@ export const Services = () => {
         gap={{ base: "2rem", lg: "1.7rem", xl: "1.4rem", "2xl": "2rem" }}
         px={{ base: "1rem", md: "15%", lg: "20%", xl: "0rem" }}
         wrap={{ base: "wrap", md: "wrap", xl: "wrap", "2xl": "nowrap" }}
+        mt="1rem"
       >
         {servicesData.map((service, index) => (
           <ServicesBox

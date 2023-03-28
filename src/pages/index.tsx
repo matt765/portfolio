@@ -31,8 +31,7 @@ export default function Home() {
       </Head>
       <Flex
         direction="column"
-        pl={{ base: "0vw", md: "0vw", lg: "13rem" }}
-        gap="5rem"
+        pl={{ base: "0vw", md: "0vw", lg: "13rem" }}     
         bgImage={colorMode === "light" ? "url(mountains.jpg)" : ""}
         bgRepeat="no-repeat"
         bgAttachment="fixed"
@@ -41,9 +40,7 @@ export default function Home() {
         <Navbar />
         <MobileNavbar />
         <Hero />
-        <Services />
-        
-
+        <Services />        
         <Projects />
         <Experience />
         <Contact />

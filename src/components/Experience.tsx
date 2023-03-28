@@ -1,5 +1,4 @@
-import { Flex, Heading, ListItem, Text, UnorderedList } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import { SectionTitle } from "./SectionTitle";
 
 export const Experience = () => {
@@ -8,7 +7,7 @@ export const Experience = () => {
       w="100%"
       justify="center"
       alignItems="center"
-      mt="2rem"
+      mt="6rem"
       mb="4rem"
       id="experience"
       direction="column"
@@ -46,7 +45,7 @@ export const Experience = () => {
                 <UnorderedList listStyleType="none" ml="0">
                   <ListItem>
                     <Text variant="paragraphSecondary" mb="0.2rem">
-                      - Involved in designing and developing ReactJS &
+                      - Involved in developing and designing ReactJS &
                       TypeScript applications, utilizing various styling
                       libraries
                     </Text>

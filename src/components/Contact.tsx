@@ -50,19 +50,33 @@ export const Contact = () => {
       // }}
       id="contact"
       direction="column"
-      w="30%"
+      w={{ base: "90%", sm: "80%", md: "30rem" }}
       mx="auto"
       gap="1.5rem"
       mb="2rem"
       pb="5rem"
-      mt="0rem"
+      mt="5rem"
     >
       <Flex alignItems="center">
-        <Flex w="3rem" h="1px" bg="mainColor" mb="1.5rem" mr="2rem"></Flex>
+        <Flex
+          w="3rem"
+          h="1px"
+          bg="mainColor"
+          mb="1.5rem"
+          mr="2rem"
+          display={{ base: "none", md: "flex" }}
+        ></Flex>
         <Heading as="h2" mb="2rem">
           Contact me
         </Heading>
-        <Flex w="3rem" h="1px" bg="mainColor" mb="1.5rem" ml="2rem"></Flex>
+        <Flex
+          w="3rem"
+          h="1px"
+          bg="mainColor"
+          mb="1.5rem"
+          ml="2rem"
+          display={{ base: "none", md: "flex" }}
+        ></Flex>
       </Flex>
 
       <FormControl isRequired>
@@ -71,7 +85,6 @@ export const Contact = () => {
           <Input
             type="text"
             name="name"
-         
             borderColor="inputBorder"
             backdropFilter="blur(24px)"
           />
@@ -83,7 +96,6 @@ export const Contact = () => {
           <Input
             type="email"
             name="email"
-         
             borderColor="inputBorder"
             backdropFilter="blur(24px)"
           />
@@ -94,7 +106,6 @@ export const Contact = () => {
 
         <Textarea
           name="message"
-        
           rows={6}
           resize="none"
           borderColor="inputBorder"
