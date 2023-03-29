@@ -27,8 +27,12 @@ const theme = extendTheme({
     global: {
       body: {
         bg: "secondaryBg",
-        color: "primaryText",
+        color: "primaryText",       
+        overflowX: "hidden"
+      },
+      html: {
         scrollBehavior: "smooth",
+        bg: "secondaryBg",
       },
       ...Headings,
     },

@@ -12,7 +12,7 @@ export const colors = {
     _dark: "#272a30",
   },
   secondaryBg: {
-    default: "white",
+    default: "#2c2f35",
     _dark: "#2c2f35",
   },
   secondaryBgHover: {
@@ -47,13 +47,21 @@ export const colors = {
     default: "rgb(255,255,255,0.05)",
     _dark: "rgb(60, 64, 71, 0.7)"
   },
+  hamburgerBg: {
+    default: "rgb(60, 64, 71, 0.2)",
+    _dark: "#2c2f35",
+  },
   transparentButtonActive: {
-    default: "white",
+    default: "rgb(255,255,255,0.10)",
     _dark: "rgb(60, 64, 71)"
   },
   grayBorder: {
     default: "rgb(255,255,255,0.10)",
     _dark: "rgb(68, 72, 80, 0.9)",
+  },
+  mobileNavbarBorder: {
+    default:  "rgb(255,255,255,0.10)",
+    _dark: "rgb(255,255,255,0)",
   },
   coloredBorder: {
     default: "rgb(49, 151, 149)",

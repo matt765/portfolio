@@ -130,7 +130,6 @@ const MobileNavbarItem = ({ text, color, path, onClick }: NavbarItemProps) => (
 
 export const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <Flex
@@ -146,6 +145,11 @@ export const MobileNavbar = () => {
         py="0.3rem"
         alignItems="center"
         zIndex="999"
+        backdropFilter="blur(24px)"
+        borderWidth="0 0 1px 0"
+        borderStyle="solid"
+        borderColor="mobileNavbarBorder"
+        maxW="100vw"
       >
         <Flex py="0.5rem">
           <Image src="/logo.png" alt="" width={120} height={70} />
@@ -153,7 +157,7 @@ export const MobileNavbar = () => {
         <Flex
           w="2.7rem"
           h="3rem"
-          bg="secondaryBg"
+          bg="hamburgerBg"
           borderStyle="solid"
           borderWidth="1px"
           borderColor="rgb(255,255,255,0.2)"
@@ -187,7 +191,7 @@ export const MobileNavbar = () => {
             alignItems="flex-start"
             w="100%"
             h="100%"
-            bg="secondaryBg"
+            bg="hamburgerBg"
             position="fixed"
             top="5rem"
             left="0"
@@ -197,6 +201,7 @@ export const MobileNavbar = () => {
             pt="2rem"
             display={{ base: "flex", lg: "none" }}
             zIndex="99"
+            backdropFilter="blur(24px)"
           >
             <MobileNavbarItem
               text="Home"

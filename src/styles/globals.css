@@ -3,12 +3,3 @@
   padding: 0;
   margin: 0;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  background-color: #2c2f35 !important;
-}

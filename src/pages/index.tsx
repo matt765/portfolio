@@ -20,36 +20,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AnimatePresence exitBeforeEnter>
-        <motion.div
-          style={{
-            backgroundImage: colorMode === "light" ? "url(mountains.jpg)" : "",
-            transition: "background-image 0.5s ease",
-          }}
-          animate={{
-            backgroundImage: colorMode === "light" ? "url(mountains.jpg)" : "",
-          }}
-        >
-          <Flex
-            direction="column"
-            pl={{ base: "0vw", md: "0vw", lg: "13rem" }}
-            bgImage={colorMode === "light" ? "url(mountains.jpg)" : ""}
-            bgRepeat="no-repeat"
-            bgAttachment="fixed"
-            bgSize="cover"
-            transition="0.5s"
-          >
-            <Navbar />
-            <MobileNavbar />
-            <Hero />
-            <Services />
-            <Projects />
-            <Experience />
-            <Contact />
-            <ThemeToggle />
-          </Flex>
-        </motion.div>
-      </AnimatePresence>
+      <Flex
+        direction="column"
+        pl={{ base: "0vw", md: "0vw", lg: "13rem" }}
+        bgImage={colorMode === "light" ? "url(mountains.jpg)" : ""}
+        bgRepeat="no-repeat"
+        bgAttachment="fixed"
+        bgSize="cover"
+        transition="0.5s"
+      >
+        <Navbar />
+        <MobileNavbar />
+        <Hero />
+        <Services />
+        <Projects />
+        <Experience />
+        <Contact />
+        <ThemeToggle />
+      </Flex>
     </>
   );
 }

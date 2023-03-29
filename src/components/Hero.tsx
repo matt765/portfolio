@@ -3,7 +3,7 @@ import { TransparentButton } from "./buttons/TransparentButton";
 
 export const Hero = () => {
   return (
-    <Flex w="100%" h="100vh" alignItems="center" justify="center" id="home" >
+    <Flex w="100%" h="100vh" alignItems="center" justify="center" id="home" pt={{ base: "6rem", md: "0"}} >
       <Flex
         w="90%"
         alignItems="center"

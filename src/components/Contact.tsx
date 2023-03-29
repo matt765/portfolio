@@ -4,7 +4,6 @@ import {
   FormLabel,
   Heading,
   Input,
-  InputGroup,
   Textarea,
   useClipboard,
 } from "@chakra-ui/react";
@@ -16,13 +15,8 @@ export const Contact = () => {
 
   return (
     <Flex
-      // bg={useColorModeValue("gray.100", "secondaryBg")}
       align="center"
       justify="center"
-      // css={{
-      //   backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
-      //   backgroundAttachment: "fixed",
-      // }}
       id="contact"
       direction="column"
       w={{ base: "90%", sm: "80%", md: "30rem" }}
@@ -31,6 +25,11 @@ export const Contact = () => {
       mb="2rem"
       pb="5rem"
       mt="5rem"
+      sx={{
+        "& form": {
+          width: "100%",
+        },
+      }}
     >
       <Flex alignItems="center">
         <Flex
@@ -40,7 +39,7 @@ export const Contact = () => {
           mb="1.5rem"
           mr="2rem"
           display={{ base: "none", md: "flex" }}
-        ></Flex>
+        />
         <Heading as="h2" mb="2rem">
           Contact me
         </Heading>
@@ -51,44 +50,46 @@ export const Contact = () => {
           mb="1.5rem"
           ml="2rem"
           display={{ base: "none", md: "flex" }}
-        ></Flex>
+        />
       </Flex>
-
-      <FormControl isRequired>
-        <FormLabel>Name</FormLabel>
-        <InputGroup>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input
+          type="hidden"
+          name="access_key"
+          value={process.env.NEXT_PUBLIC_CONTACT_FORM_API_KEY}
+        />
+        <FormControl isRequired mb="1.5rem">
+          <FormLabel>Name</FormLabel>
           <Input
             type="text"
             name="name"
             borderColor="inputBorder"
             backdropFilter="blur(24px)"
           />
-        </InputGroup>
-      </FormControl>
-      <FormControl isRequired>
-        <FormLabel>Email</FormLabel>
-        <InputGroup>
+        </FormControl>
+        <FormControl isRequired mb="1.5rem">
+          <FormLabel>Email</FormLabel>
           <Input
             type="email"
             name="email"
             borderColor="inputBorder"
             backdropFilter="blur(24px)"
           />
-        </InputGroup>
-      </FormControl>
-      <FormControl isRequired mb="2rem">
-        <FormLabel>Message</FormLabel>
-
-        <Textarea
-          name="message"
-          rows={6}
-          resize="none"
-          borderColor="inputBorder"
-          backdropFilter="blur(24px)"
-        />
-      </FormControl>
-
-      <TransparentButton text="Get in touch" />
+        </FormControl>
+        <FormControl isRequired mb="2rem">
+          <FormLabel>Message</FormLabel>
+          <Textarea
+            name="message"
+            rows={6}
+            resize="none"
+            borderColor="inputBorder"
+            backdropFilter="blur(24px)"
+          />
+        </FormControl>
+        <Flex w="100%" justify="center" mt="3rem">
+          <TransparentButton text="Get in touch" type="submit" />
+        </Flex>
+      </form>
     </Flex>
   );
 };

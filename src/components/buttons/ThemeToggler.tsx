@@ -11,7 +11,7 @@ export const ThemeToggle = () => {
       position="fixed"
       sx={{
         "& svg": {
-          width: "25px",
+          maxWidth: "22px",
           fill: "mainColorLight",
           color: "mainColorLight"
         },
