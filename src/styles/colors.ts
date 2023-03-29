@@ -1,7 +1,11 @@
 export const colors = {
   mainColor: {
-    default: "rgb(49, 151, 149)",
-    _dark: "rgb(49, 151, 149)",
+    default: "rgb(64, 184, 182)",
+    _dark: "rgb(64, 184, 182)",
+  },
+  mainColorLight: {
+    default: "rgb(95, 196, 194)",
+    _dark: "rgb(95, 196, 194)"
   },
   primaryBg: {
     default: "rgb(0,0,0,0)",
@@ -25,7 +29,7 @@ export const colors = {
   },
   coloredText: {
     default: "rgb(49, 151, 149)",
-    _dark: "rgb(49, 151, 149)",
+    _dark: "rgb(95, 187, 185)",
   },
   coloredButton: {
     default: "rgba(42, 142, 139, 0.7)",

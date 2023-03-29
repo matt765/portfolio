@@ -1,5 +1,5 @@
 import { Flex, Heading, Icon, Text } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+
 import { ReactLogo } from "@/assets/icons/react";
 import { TypescriptLogo } from "@/assets/icons/typescript";
 import { WebflowLogo } from "@/assets/icons/webflow";
@@ -74,33 +74,35 @@ const ServicesBox = ({ title, text, logoArray }: ServicesBoxProps) => (
 
 export const Services = () => {
   return (
-    <Flex
-      w="100%"
-      justify="center"
-      alignItems="center"
-      direction="column"
-      id="services"
-      mb="10rem"
-    >
+    <>
       <SectionTitle title="What I offer" />
       <Flex
+        w="100%"
         justify="center"
         alignItems="center"
-        direction="row"
-        gap={{ base: "2rem", lg: "1.7rem", xl: "1.4rem", "2xl": "2rem" }}
-        px={{ base: "1rem", md: "15%", lg: "20%", xl: "0rem" }}
-        wrap={{ base: "wrap", md: "wrap", xl: "wrap", "2xl": "nowrap" }}
-        mt="1rem"
+        direction="column"
+        id="services"
+        mb="10rem"
       >
-        {servicesData.map((service, index) => (
-          <ServicesBox
-            title={service.title}
-            text={service.text}
-            logoArray={service.logoArray}
-            key={`${service.title}-${index}`}
-          />
-        ))}
+        <Flex
+          justify="center"
+          alignItems="center"
+          direction="row"
+          gap={{ base: "2rem", lg: "1.7rem", xl: "1.4rem", "2xl": "2rem" }}
+          px={{ base: "1rem", md: "15%", lg: "20%", xl: "0rem" }}
+          wrap={{ base: "wrap", md: "wrap", xl: "wrap", "2xl": "nowrap" }}
+          mt="1rem"
+        >
+          {servicesData.map((service, index) => (
+            <ServicesBox
+              title={service.title}
+              text={service.text}
+              logoArray={service.logoArray}
+              key={`${service.title}-${index}`}
+            />
+          ))}
+        </Flex>
       </Flex>
-    </Flex>
+    </>
   );
 };

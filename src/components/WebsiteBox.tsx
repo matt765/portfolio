@@ -37,7 +37,6 @@ export const WebsiteBox = ({
       borderWidth="0 0px 0px 0"
       borderStyle="solid"
       borderColor="grayBorder"
-      // bg="primaryBg"
       pb="5rem"
       pt="0rem"
       mx="3rem"
@@ -109,7 +108,7 @@ export const WebsiteBox = ({
               md: "2rem !important",
               "2xl": "2rem !important",
             }}
-          >        
+          >
             {title}
           </Heading>
         </Flex>

@@ -51,7 +51,7 @@ export const Projects = () => {
         justify="center"
         alignItems="center"
         mt="1.5rem"
-        mb="-4rem"
+        mb="2rem"
       >
         <Flex
           w="100%"

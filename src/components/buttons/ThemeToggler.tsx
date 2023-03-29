@@ -1,5 +1,7 @@
-import { Button, Flex, useColorMode } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { Button, Flex, Icon, useColorMode } from "@chakra-ui/react";
+
+import { MoonIcon } from "@/assets/icons/moon";
+import { SunIcon } from "@/assets/icons/sun";
 
 export const ThemeToggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -7,27 +9,43 @@ export const ThemeToggle = () => {
     <Flex
       onClick={toggleColorMode}
       position="fixed"
-      w="3.2rem"
+      sx={{
+        "& svg": {
+          width: "25px",
+          fill: "mainColorLight",
+          color: "mainColorLight"
+        },
+      }}
       h="3.2rem"
-      right="1.5rem"
-      bottom="1.5rem"
-      borderRadius="50px"
-      bg="themeTogglerBg"
-      borderColor="themeTogglerBorder"
-      borderStyle="solid"
-      borderWidth="1px"
-      _hover={{ bg: "themeTogglerHoverBg" }}
-      justify="center"
+      w="3.2rem"
       alignItems="center"
-      cursor="pointer"
+   
+      mt="0.9rem"
+      p="0.5rem"
+      pl="0.6rem"
+      borderRadius="10px"
+      justify="center"
+      _hover={{
+        bg: "rgba(106, 111, 121, 0.4)",
+      }}
+      _active={{
+        bg: "rgba(171, 173, 179, 0.4)",
+      }}
       transition="0.3s"
+      bg="secondaryBgHover"
+      borderWidth="1px"
+      borderStyle="solid"
+      borderColor="grayBorder"
+      cursor="pointer"
       zIndex="99999"
+      right="2rem"
+      bottom="2rem"
     >
-      {colorMode === "light" ? (
-        <SunIcon boxSize={5} />
-      ) : (
-        <MoonIcon boxSize={4} />
-      )}
+      {colorMode === "light" ? 
+        <Icon as={SunIcon} />
+       :      
+        <Icon as={MoonIcon} />
+      }
     </Flex>
   );
 };
