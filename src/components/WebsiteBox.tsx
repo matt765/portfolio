@@ -1,6 +1,6 @@
 import { Flex, Heading, Link, Text } from "@chakra-ui/react";
 import Image, { StaticImageData } from "next/image";
-
+import { motion } from "framer-motion";
 interface WebsiteBoxProps {
   title: string;
   desc: string;
@@ -50,7 +50,7 @@ export const WebsiteBox = ({
       <Flex
         w={{ base: "100%", sm: "100%", xl: "60%" }}
         borderStyle="solid"
-        borderWidth="1px"
+        borderWidth="0px"
         zIndex="0"
         borderColor="grayBorder"
         borderRadius="6px"
@@ -69,10 +69,20 @@ export const WebsiteBox = ({
             width: "100%",
             opacity: "0.9",
           },
+          "& div": {
+            width: "100%",
+          },
         }}
         backdropFilter="blur(24px)"
       >
-        <Image src={image} alt="" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+        >
+          <Image src={image} alt="" />
+        </motion.div>
         <Link
           position="absolute"
           top="0"
@@ -88,6 +98,7 @@ export const WebsiteBox = ({
           isExternal
         />
       </Flex>
+
       <Flex
         direction="column"
         pl={{ base: "0.2rem", md: "0rem" }}
@@ -101,86 +112,114 @@ export const WebsiteBox = ({
           mt={{ base: "-0.4rem", "2xl": "0" }}
           mb="1rem"
         >
-          <Heading
-            as="h3"
-            fontSize={{
-              base: "1.8rem !important",
-              md: "2rem !important",
-              "2xl": "2rem !important",
-            }}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
           >
-            {title}
-          </Heading>
+            <Heading
+              as="h3"
+              fontSize={{
+                base: "1.8rem !important",
+                md: "2rem !important",
+                "2xl": "2rem !important",
+              }}
+            >
+              {title}
+            </Heading>
+          </motion.div>
         </Flex>
         <Flex color="primaryText" mt="0.5rem">
-          <Text variant="paragraphLarge">{desc}</Text>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+          >
+            <Text variant="paragraphLarge">{desc}</Text>{" "}
+          </motion.div>
         </Flex>
         <Flex
           color="secondaryText"
           mt="0.7rem"
           fontSize={{ base: "0.9rem", "2xl": "1rem" }}
         >
-          <Text variant="paragraphSecondary">{techStack}</Text>
-        </Flex>
-        <Flex gap="1.2rem" mt="1.3rem">
-          <Link
-            w={{ base: "11rem", "2xl": "49%" }}
-            h="3rem"
-            href={liveLink}
-            borderRadius="5px"
-            textDecoration="none"
-            _hover={{ bg: "coloredButtonHover" }}
-            transition="0.2s"
-            isExternal
-            borderWidth="1px"
-            borderStyle="solid"
-            borderColor="mainColor"
-            bg="coloredButton"
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
           >
-            <Flex
-              w="100%"
-              h="100%"
-              justify="center"
-              alignItems="center"
-              color="white"
-              fontWeight="500"
-              fontSize="0.9rem"
-              textDecoration="none"
-              transition="0.2s"
-            >
-              Live
-            </Flex>
-          </Link>
-          {(codeLink || previewLink) && (
+            <Text variant="paragraphSecondary">{techStack}</Text>
+          </motion.div>
+        </Flex>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+        >
+          <Flex gap="1.2rem" mt="1.3rem">
             <Link
               w={{ base: "11rem", "2xl": "49%" }}
               h="3rem"
-              bg="transparentButton"
-              href={codeLink ? codeLink : previewLink}
+              href={liveLink}
               borderRadius="5px"
-              borderWidth="1px"
-              borderStyle="solid"
-              borderColor="coloredBorder"
-              _hover={{ bg: "transparentButtonHover" }}
+              textDecoration="none"
+              _hover={{ bg: "coloredButtonHover" }}
               transition="0.2s"
               isExternal
-              backdropFilter="blur(24px)"
+              borderWidth="0px"
+              borderStyle="solid"
+              borderColor="mainColor"
+              bg="coloredButton"
             >
               <Flex
                 w="100%"
                 h="100%"
                 justify="center"
                 alignItems="center"
-                color="primaryText"
+                color="white"
                 fontWeight="500"
                 fontSize="0.9rem"
+                textDecoration="none"
                 transition="0.2s"
               >
-                {codeLink ? "Code" : "Preview"}
+                Live
               </Flex>
             </Link>
-          )}
-        </Flex>
+            {(codeLink || previewLink) && (
+              <Link
+                w={{ base: "11rem", "2xl": "49%" }}
+                h="3rem"
+                bg="transparentButton"
+                href={codeLink ? codeLink : previewLink}
+                borderRadius="5px"
+                borderWidth="1px"
+                borderStyle="solid"
+                borderColor="coloredBorder"
+                _hover={{ bg: "transparentButtonHover" }}
+                transition="0.2s"
+                isExternal
+                backdropFilter="blur(24px)"
+              >
+                <Flex
+                  w="100%"
+                  h="100%"
+                  justify="center"
+                  alignItems="center"
+                  color="primaryText"
+                  fontWeight="500"
+                  fontSize="0.9rem"
+                  transition="0.2s"
+                >
+                  {codeLink ? "Code" : "Preview"}
+                </Flex>
+              </Link>
+            )}
+          </Flex>
+        </motion.div>
       </Flex>
     </Flex>
   );

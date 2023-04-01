@@ -1,5 +1,5 @@
 import { Flex, Heading, Icon, Text } from "@chakra-ui/react";
-
+import { motion } from "framer-motion";
 import { ReactLogo } from "@/assets/icons/react";
 import { TypescriptLogo } from "@/assets/icons/typescript";
 import { WebflowLogo } from "@/assets/icons/webflow";
@@ -94,12 +94,19 @@ export const Services = () => {
           mt="0rem"
         >
           {servicesData.map((service, index) => (
-            <ServicesBox
-              title={service.title}
-              text={service.text}
-              logoArray={service.logoArray}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: 0.1 * index }}
               key={`${service.title}-${index}`}
-            />
+            >
+              <ServicesBox
+                title={service.title}
+                text={service.text}
+                logoArray={service.logoArray}               
+              />
+            </motion.div>
           ))}
         </Flex>
       </Flex>

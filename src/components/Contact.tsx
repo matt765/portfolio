@@ -7,6 +7,7 @@ import {
   Textarea,
   useClipboard,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 import { TransparentButton } from "./buttons/TransparentButton";
 
@@ -31,64 +32,79 @@ export const Contact = () => {
         },
       }}
     >
-      <Flex alignItems="center">
-        <Flex
-          w="3rem"
-          h="1px"
-          bg="mainColor"
-          mb="1.5rem"
-          mr="2rem"
-          display={{ base: "none", md: "flex" }}
-        />
-        <Heading as="h2" mb="2rem">
-          Contact me
-        </Heading>
-        <Flex
-          w="3rem"
-          h="1px"
-          bg="mainColor"
-          mb="1.5rem"
-          ml="2rem"
-          display={{ base: "none", md: "flex" }}
-        />
-      </Flex>
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input
-          type="hidden"
-          name="access_key"
-          value={process.env.NEXT_PUBLIC_CONTACT_FORM_API_KEY}
-        />
-        <FormControl isRequired mb="1.5rem">
-          <FormLabel>Name</FormLabel>
-          <Input
-            type="text"
-            name="name"
-            borderColor="inputBorder"
-            backdropFilter="blur(24px)"
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.3 }}
+      >
+        <Flex alignItems="center">
+          <Flex
+            w="3rem"
+            h="1px"
+            bg="mainColor"
+            mb="1.5rem"
+            mr="2rem"
+            display={{ base: "none", md: "flex" }}
           />
-        </FormControl>
-        <FormControl isRequired mb="1.5rem">
-          <FormLabel>Email</FormLabel>
-          <Input
-            type="email"
-            name="email"
-            borderColor="inputBorder"
-            backdropFilter="blur(24px)"
+          <Heading as="h2" mb="2rem">
+            Contact me
+          </Heading>
+          <Flex
+            w="3rem"
+            h="1px"
+            bg="mainColor"
+            mb="1.5rem"
+            ml="2rem"
+            display={{ base: "none", md: "flex" }}
           />
-        </FormControl>
-        <FormControl isRequired mb="2rem">
-          <FormLabel>Message</FormLabel>
-          <Textarea
-            name="message"
-            rows={6}
-            resize="none"
-            borderColor="inputBorder"
-            backdropFilter="blur(24px)"
-          />
-        </FormControl>
-        <Flex w="100%" justify="center" mt="3rem">
-          <TransparentButton text="Get in touch" type="submit" />
         </Flex>
+      </motion.div>
+
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value={process.env.NEXT_PUBLIC_CONTACT_FORM_API_KEY}
+          />
+          <FormControl isRequired mb="1.5rem">
+            <FormLabel>Name</FormLabel>
+            <Input
+              type="text"
+              name="name"
+              borderColor="inputBorder"
+              backdropFilter="blur(24px)"
+            />
+          </FormControl>
+          <FormControl isRequired mb="1.5rem">
+            <FormLabel>Email</FormLabel>
+            <Input
+              type="email"
+              name="email"
+              borderColor="inputBorder"
+              backdropFilter="blur(24px)"
+            />
+          </FormControl>
+          <FormControl isRequired mb="2rem">
+            <FormLabel>Message</FormLabel>
+            <Textarea
+              name="message"
+              rows={6}
+              resize="none"
+              borderColor="inputBorder"
+              backdropFilter="blur(24px)"
+            />
+          </FormControl>
+          <Flex w="100%" justify="center" mt="3rem">
+            <TransparentButton text="Get in touch" type="submit" />
+          </Flex>
+        </motion.div>
       </form>
     </Flex>
   );
