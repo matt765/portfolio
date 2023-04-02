@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 export const Experience = () => {
   return (
     <>
+      <Flex id="experience" />
       <SectionTitle title="Experience" />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -17,7 +18,6 @@ export const Experience = () => {
           justify="center"
           alignItems="center"
           mb="4rem"
-          id="experience"
           direction="column"
         >
           <Flex

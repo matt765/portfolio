@@ -13,7 +13,7 @@ import { TransparentButton } from "./buttons/TransparentButton";
 
 export const Contact = () => {
   const { hasCopied, onCopy } = useClipboard("example@example.com");
-  console.log(process.env.NEXT_PUBLIC_CONTACT_FORM_API_KEY);
+
   return (
     <Flex
       align="center"

@@ -75,13 +75,13 @@ const ServicesBox = ({ title, text, logoArray }: ServicesBoxProps) => (
 export const Services = () => {
   return (
     <>
+      <Flex id="services" />
       <SectionTitle title="What I offer" />
       <Flex
         w="100%"
         justify="center"
         alignItems="center"
         direction="column"
-        id="services"
         mb="10rem"
       >
         <Flex
@@ -104,7 +104,7 @@ export const Services = () => {
               <ServicesBox
                 title={service.title}
                 text={service.text}
-                logoArray={service.logoArray}               
+                logoArray={service.logoArray}
               />
             </motion.div>
           ))}

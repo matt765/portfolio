@@ -46,13 +46,7 @@ export const Projects = () => {
     <>
       <Flex id="projects" />
       <SectionTitle title="My recent projects" />
-      <Flex
-        w="100%"
-        justify="center"
-        alignItems="center"
-        mt="1.5rem"
-        mb="2rem"
-      >
+      <Flex w="100%" justify="center" alignItems="center" mt="1.5rem" mb="2rem">
         <Flex
           w="100%"
           wrap="nowrap"
