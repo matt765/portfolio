@@ -36,7 +36,7 @@ export const Hero = () => {
                 <Text
                   as="span"
                   variant="titleColored"
-                  ml="1.1rem"
+                  ml={{ base: "0.7rem", md: "1.1rem" }}
                   fontSize={{ base: "2rem", md: "2.8rem", xl: "3.8rem" }}
                 >
                   Front-End Developer
@@ -57,9 +57,9 @@ export const Hero = () => {
                 maxW="35rem"
                 fontSize={{ base: "1rem", xl: "1.1rem" }}
               >
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                penatibus et magnis
+                I strive to deliver user experiences that are both aesthetically
+                pleasing and intuitive, creating scalable applications and
+                websites consistent with industry standards.
               </Text>
             </motion.div>
           </Flex>

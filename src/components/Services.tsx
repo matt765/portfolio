@@ -16,17 +16,17 @@ interface ServicesBoxProps {
 const servicesData = [
   {
     title: "ReactJS applications",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget velit turpis. Nunc sagittis vel libero sed tristique. ",
+    text: "Specializing in ReactJS, Typescript and NextJS, I build high-quality web applications that are tailored to your needs.",
     logoArray: [ReactLogo, TypescriptLogo],
   },
   {
     title: "Handcoded websites",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget velit turpis. Nunc sagittis vel libero sed tristique. ",
+    text: "Scalable websites optimized for performance and accessibility, created with AstroJS, Tailwind or Chakra UI  ",
     logoArray: [AstroLogo, TailwindLogo],
   },
   {
     title: "Webflow websites",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget velit turpis. Nunc sagittis vel libero sed tristique. ",
+    text: "I also design and develop Webflow websites, creating solutions that are both highly functional and easy to maintain. ",
     logoArray: [WebflowLogo],
   },
 ];
@@ -51,7 +51,7 @@ const ServicesBox = ({ title, text, logoArray }: ServicesBoxProps) => (
     alignItems="center"
     gap="1rem"
     textAlign="center"
-    mx={{ base: "10%", lg: "0%" }}
+    mx="auto"
     pt="3rem"
     _hover={{ bg: "secondaryBgHover" }}
     transition="0.3s"

@@ -56,6 +56,34 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navItems = [
+    {
+      text: "Home",
+      path: "#home",
+      isActive: activeItem === "home",
+    },
+    {
+      text: "Services",
+      path: "#services",
+      isActive: activeItem === "services",
+    },
+    {
+      text: "Projects",
+      path: "#projects",
+      isActive: activeItem === "projects",
+    },
+    {
+      text: "Experience",
+      path: "#experience",
+      isActive: activeItem === "experience",
+    },
+    {
+      text: "Contact",
+      path: "#contact",
+      isActive: activeItem === "contact",
+    },
+  ];
+
   return (
     <Flex
       w="14rem"
@@ -80,38 +108,23 @@ export const Navbar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Link href="#home">
-          <Flex mb="2rem" ml="-1rem">
-            <Image src="/logo.png" alt="" width={100} height={100} />
+        <nav>
+          <Link href="#home">
+            <Flex mb="2rem" ml="-1rem">
+              <Image src="/logo.png" alt="" width={100} height={100} />
+            </Flex>
+          </Link>
+          <Flex gap="1.5rem" direction="column" alignItems="flex-start">
+            {navItems.map((navItem, index) => (
+              <NavbarItem
+                key={index}
+                text={navItem.text}
+                path={navItem.path}
+                isActive={navItem.isActive}
+              />
+            ))}
           </Flex>
-        </Link>
-        <Flex gap="1.5rem" direction="column" alignItems="flex-start">
-          <NavbarItem
-            text="Home"
-            path="#home"
-            isActive={activeItem === "home"}
-          />
-          <NavbarItem
-            text="Services"
-            path="#services"
-            isActive={activeItem === "services"}
-          />
-          <NavbarItem
-            text="Projects"
-            path="#projects"
-            isActive={activeItem === "projects"}
-          />
-          <NavbarItem
-            text="Experience"
-            path="#experience"
-            isActive={activeItem === "experience"}
-          />
-          <NavbarItem
-            text="Contact"
-            path="#contact"
-            isActive={activeItem === "contact"}
-          />
-        </Flex>
+        </nav>
       </motion.div>
     </Flex>
   );
@@ -142,6 +155,34 @@ const MobileNavbarItem = ({ text, color, path, onClick }: NavbarItemProps) => (
 
 export const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const mobileNavItems = [
+    {
+      text: "Home",
+      color: "coloredText",
+      path: "#home",
+      onClick: () => setIsOpen(false),
+    },
+    {
+      text: "Services",
+      path: "#services",
+      onClick: () => setIsOpen(false),
+    },
+    {
+      text: "Projects",
+      path: "#projects",
+      onClick: () => setIsOpen(false),
+    },
+    {
+      text: "Experience",
+      path: "#experience",
+      onClick: () => setIsOpen(false),
+    },
+    {
+      text: "Contact",
+      path: "#contact",
+      onClick: () => setIsOpen(false),
+    },
+  ];
   return (
     <>
       <Flex
@@ -215,32 +256,15 @@ export const MobileNavbar = () => {
             zIndex="99"
             backdropFilter="blur(24px)"
           >
-            <MobileNavbarItem
-              text="Home"
-              color="coloredText"
-              path="#home"
-              onClick={() => setIsOpen(false)}
-            />
-            <MobileNavbarItem
-              text="Services"
-              path="#services"
-              onClick={() => setIsOpen(false)}
-            />
-            <MobileNavbarItem
-              text="Projects"
-              path="#projects"
-              onClick={() => setIsOpen(false)}
-            />
-            <MobileNavbarItem
-              text="Experience"
-              path="#experience"
-              onClick={() => setIsOpen(false)}
-            />
-            <MobileNavbarItem
-              text="Contact"
-              path="#contact"
-              onClick={() => setIsOpen(false)}
-            />
+            {mobileNavItems.map((mobileNavItem, index) => (
+              <MobileNavbarItem
+                key={index}
+                text={mobileNavItem.text}
+                color={mobileNavItem.color}
+                path={mobileNavItem.path}
+                onClick={mobileNavItem.onClick}
+              />
+            ))}
           </Flex>
         </motion.div>
       )}
