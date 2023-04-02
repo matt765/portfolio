@@ -1,7 +1,7 @@
 import { Flex, Link, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface NavbarItemProps {
   text: string;

@@ -1,4 +1,5 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+
 import TailcastImage from "../assets/images/tailcast.png";
 import CoinstackImage from "../assets/images/paysafenow.png";
 import InnovateImage from "../assets/images/innovate.png";

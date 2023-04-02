@@ -5,6 +5,7 @@ import { TypescriptLogo } from "@/assets/icons/typescript";
 import { WebflowLogo } from "@/assets/icons/webflow";
 import { AstroLogo } from "@/assets/icons/astro";
 import { TailwindLogo } from "@/assets/icons/tailwind";
+
 import { SectionTitle } from "./SectionTitle";
 
 interface ServicesBoxProps {

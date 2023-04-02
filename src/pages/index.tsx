@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { Flex, useColorMode } from "@chakra-ui/react";
-import { AnimatePresence, motion } from "framer-motion";
 
 import { Hero } from "@/components/Hero";
 import { Experience } from "@/components/Experience";

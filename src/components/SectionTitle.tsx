@@ -26,7 +26,6 @@ export const SectionTitle = ({ title }: SectionTitleProps) => (
         bg="mainColor"
         display={{ base: "none", md: "flex" }}
       />
-
       <Heading
         as="h2"
         fontSize={{
@@ -40,7 +39,6 @@ export const SectionTitle = ({ title }: SectionTitleProps) => (
       >
         {title}
       </Heading>
-
       <Flex
         w="3rem"
         h="1px"

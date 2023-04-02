@@ -1,9 +1,13 @@
+import { GithubIcon } from "@/assets/icons/github";
+import { MailIcon } from "@/assets/icons/mail";
 import {
   Flex,
   FormControl,
   FormLabel,
   Heading,
+  Icon,
   Input,
+  Link,
   Textarea,
   useClipboard,
 } from "@chakra-ui/react";
@@ -24,7 +28,7 @@ export const Contact = () => {
       mx="auto"
       gap="1.5rem"
       mb="2rem"
-      pb="5rem"
+      pb="2rem"
       mt="5rem"
       sx={{
         "& form": {
@@ -106,6 +110,45 @@ export const Contact = () => {
           </Flex>
         </motion.div>
       </form>
+      <Flex justify="center" alignItems="center" gap="1.5rem" mt="1.5rem">
+        <Link
+          href="https://github.com/matt765/portfolio"
+          isExternal
+          width="3rem"
+          fill="githubIcon"
+          _hover={{
+            "& *": {
+              fill: "rgb(255,255,255,0.9)",
+            },
+          }}
+          transition="0.3s"
+          sx={{
+            "& *": {
+              fill: "rgb(255,255,255,0.6)",
+            },
+          }}
+        >
+          <Flex width="3rem">
+            <Icon as={GithubIcon} />
+          </Flex>
+        </Link>
+        <Link
+          href="mailto:mateusz.wyrebek@gmail.com"
+          isExternal
+          width="3rem"
+          fill="githubIcon"
+          _hover={{
+            "& *": {
+              stroke: "rgb(255,255,255,0.9)",
+            },
+          }}
+          transition="0.3s"
+        >
+          <Flex width="3.5rem">
+            <Icon as={MailIcon} />
+          </Flex>
+        </Link>
+      </Flex>
     </Flex>
   );
 };

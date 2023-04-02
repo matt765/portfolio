@@ -1,6 +1,8 @@
 import { Flex, Heading, Link, Text } from "@chakra-ui/react";
-import { TransparentButton } from "./buttons/TransparentButton";
 import { motion } from "framer-motion";
+
+import { TransparentButton } from "./buttons/TransparentButton";
+
 export const Hero = () => {
   return (
     <Flex

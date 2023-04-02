@@ -1,6 +1,7 @@
 import { Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
-import { SectionTitle } from "./SectionTitle";
 import { motion } from "framer-motion";
+
+import { SectionTitle } from "./SectionTitle";
 
 export const Experience = () => {
   return (
@@ -46,10 +47,17 @@ export const Experience = () => {
                     Warsaw, Poland <br />
                   </Text>
                   <Flex direction="column">
-                    <Text variant="experienceSubTitle" mb="0.2rem">
+                    <Text
+                      variant="experienceSubTitle"
+                      mb="0.2rem"
+                      ml={{ base: 0, md: "-1rem" }}
+                    >
                       Front-End Developer - BlueSoft
                     </Text>
-                    <UnorderedList listStyleType="none" ml="0">
+                    <UnorderedList
+                      listStyleType="none"
+                      ml={{ base: 0, md: "-1rem" }}
+                    >
                       <ListItem>
                         <Text variant="paragraphSecondary" mb="0.2rem">
                           - Involved in developing and designing ReactJS &
