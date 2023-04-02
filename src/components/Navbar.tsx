@@ -75,32 +75,44 @@ export const Navbar = () => {
       display={{ base: "none", lg: "flex" }}
       backdropFilter="blur(24px)"
     >
-      <Flex mb="2rem" ml="-1rem">
-        <Image src="/logo.png" alt="" width={100} height={100} />
-      </Flex>
-      <Flex gap="1.5rem" direction="column" alignItems="flex-start">
-        <NavbarItem text="Home" path="#home" isActive={activeItem === "home"} />
-        <NavbarItem
-          text="Services"
-          path="#services"
-          isActive={activeItem === "services"}
-        />
-        <NavbarItem
-          text="Projects"
-          path="#projects"
-          isActive={activeItem === "projects"}
-        />
-        <NavbarItem
-          text="Experience"
-          path="#experience"
-          isActive={activeItem === "experience"}
-        />
-        <NavbarItem
-          text="Contact"
-          path="#contact"
-          isActive={activeItem === "contact"}
-        />
-      </Flex>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Link href="#home">
+          <Flex mb="2rem" ml="-1rem">
+            <Image src="/logo.png" alt="" width={100} height={100} />
+          </Flex>
+        </Link>
+        <Flex gap="1.5rem" direction="column" alignItems="flex-start">
+          <NavbarItem
+            text="Home"
+            path="#home"
+            isActive={activeItem === "home"}
+          />
+          <NavbarItem
+            text="Services"
+            path="#services"
+            isActive={activeItem === "services"}
+          />
+          <NavbarItem
+            text="Projects"
+            path="#projects"
+            isActive={activeItem === "projects"}
+          />
+          <NavbarItem
+            text="Experience"
+            path="#experience"
+            isActive={activeItem === "experience"}
+          />
+          <NavbarItem
+            text="Contact"
+            path="#contact"
+            isActive={activeItem === "contact"}
+          />
+        </Flex>
+      </motion.div>
     </Flex>
   );
 };

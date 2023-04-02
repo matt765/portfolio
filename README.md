@@ -1,13 +1,13 @@
-# 4 websites
+# Front-End Portfolio
 
-Simple portfolio application for displaying websites I've created.
+This is my main portfolio application
 
 ## Tech stack:
 
-NextJS, TypeScript, ChakraUI
+ReactJS, NextJS, TypeScript, ChakraUI, Framer Motion
 
 ## Live link
-[https://4-websites.vercel.app/](https://4-websites.vercel.app/)
+[https://matt765-portfolio.vercel.app//](https://matt765-portfolio.vercel.app/)
 
 ##  Project Structure
 
@@ -17,6 +17,7 @@ NextJS, TypeScript, ChakraUI
 │   │   ├── icons
 │   │   └── images
 │   ├── components
+│   │   └── buttons
 │   ├── pages
 │   └── styles
 └── package.json
