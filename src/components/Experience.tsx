@@ -50,18 +50,18 @@ export const Experience = () => {
                     <Text
                       variant="experienceSubTitle"
                       mb="0.2rem"
-                      ml={{ base: 0, md: "-1rem" }}
+                      ml={{ base: 0, md: "0rem" }}
                     >
                       Front-End Developer - BlueSoft
                     </Text>
                     <UnorderedList
                       listStyleType="none"
-                      ml={{ base: 0, md: "-1rem" }}
+                      ml={{ base: 0, md: "0rem" }}
                     >
                       <ListItem>
                         <Text variant="paragraphSecondary" mb="0.2rem">
                           - Involved in developing and designing ReactJS &
-                          TypeScript applications, utilizing various styling
+                          TypeScript enterprise applications, utilizing various styling
                           libraries
                         </Text>
                       </ListItem>
@@ -98,7 +98,7 @@ export const Experience = () => {
                       <ListItem>
                         <Text variant="paragraphSecondary" mb="0.2rem">
                           - Developed features for small business websites in
-                          cooperation with two different agencies, often
+                          cooperation with two agencies, often
                           implementing own designs
                         </Text>
                       </ListItem>

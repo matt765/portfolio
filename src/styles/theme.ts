@@ -33,6 +33,7 @@ const theme = extendTheme({
       html: {
         scrollBehavior: "smooth",
         bg: "secondaryBg",
+        overflowX: "hidden"
       },
       ...Headings,
     },

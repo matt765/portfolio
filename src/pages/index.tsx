@@ -16,7 +16,7 @@ export default function Home() {
       <Head>
         <title>WebDev Portfolio</title>
         <meta name="description" content="Web development portfolio" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex
@@ -26,7 +26,7 @@ export default function Home() {
         bgRepeat="no-repeat"
         bgAttachment="fixed"
         bgSize="cover"
-        transition="0.5s"
+        transition="0.5s"       
       >
         <Navbar />
         <MobileNavbar />

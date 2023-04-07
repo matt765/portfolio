@@ -11,7 +11,7 @@ export const Hero = () => {
       alignItems="center"
       justify="center"
       id="home"
-      pt={{ base: "6rem", md: "0" }}
+      pt={{ base: "8rem", md: "0" }}
     >
       <Flex
         w="90%"
@@ -34,7 +34,7 @@ export const Hero = () => {
                 fontSize={{ base: "2rem", md: "2.8rem", xl: "3.8rem" }}
               >
                 Hello, my name is Matthew <br />
-                I&apos;m
+                I&apos;m a
                 <Text
                   as="span"
                   variant="titleColored"

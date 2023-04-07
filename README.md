@@ -7,7 +7,7 @@ This is my main portfolio application
 ReactJS, NextJS, TypeScript, ChakraUI, Framer Motion
 
 ## Live link
-[https://matt765-portfolio.vercel.app//](https://matt765-portfolio.vercel.app/)
+[https://matt765-portfolio.vercel.app/](https://matt765-portfolio.vercel.app/)
 
 ##  Project Structure
 
