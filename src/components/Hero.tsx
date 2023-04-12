@@ -2,6 +2,7 @@ import { Flex, Heading, Link, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import { TransparentButton } from "./buttons/TransparentButton";
+import { NavigationAnchor } from "./NavigationAnchor";
 
 export const Hero = () => {
   return (
@@ -13,6 +14,7 @@ export const Hero = () => {
       id="home"
       pt={{ base: "8rem", md: "0" }}
     >
+      <NavigationAnchor id="home" />
       <Flex
         w="90%"
         alignItems="center"

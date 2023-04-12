@@ -6,6 +6,7 @@ import InnovateImage from "../assets/images/innovate.png";
 import FoodhubImage from "../assets/images/foodhub.png";
 import { WebsiteBox } from "./WebsiteBox";
 import { SectionTitle } from "./SectionTitle";
+import { NavigationAnchor } from "./NavigationAnchor";
 
 const projectsData = [
   {
@@ -45,7 +46,7 @@ const projectsData = [
 export const Projects = () => {
   return (
     <>
-      <Flex id="projects" />
+      <NavigationAnchor id="projects" />
       <SectionTitle title="My recent projects" />
       <Flex w="100%" justify="center" alignItems="center" mt="1.5rem" mb="2rem">
         <Flex
@@ -56,11 +57,6 @@ export const Projects = () => {
           direction="column"
           gap={{ base: "0rem", md: "3rem" }}
           px={{ sm: "1rem", "2xl": "5rem" }}
-          // sx={{
-          //   "& > :last-child": {
-          //     borderWidth: "0",
-          //   },
-          // }}
         >
           {projectsData.map((project, index) => (
             <WebsiteBox {...project} key={project.title} index={index} />

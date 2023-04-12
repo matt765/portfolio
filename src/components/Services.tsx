@@ -7,6 +7,7 @@ import { AstroLogo } from "@/assets/icons/astro";
 import { TailwindLogo } from "@/assets/icons/tailwind";
 
 import { SectionTitle } from "./SectionTitle";
+import { NavigationAnchor } from "./NavigationAnchor";
 
 interface ServicesBoxProps {
   title: string;
@@ -75,8 +76,8 @@ const ServicesBox = ({ title, text, logoArray }: ServicesBoxProps) => (
 
 export const Services = () => {
   return (
-    <>
-      <Flex id="services" />
+    <>     
+      <NavigationAnchor id="services"  />
       <SectionTitle title="What I offer" />
       <Flex
         w="100%"

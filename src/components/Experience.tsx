@@ -1,12 +1,13 @@
 import { Flex, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { NavigationAnchor } from "./NavigationAnchor";
 
 import { SectionTitle } from "./SectionTitle";
 
 export const Experience = () => {
   return (
     <>
-      <Flex id="experience" />
+      <NavigationAnchor id="experience" />
       <SectionTitle title="Experience" />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -61,8 +62,8 @@ export const Experience = () => {
                       <ListItem>
                         <Text variant="paragraphSecondary" mb="0.2rem">
                           - Involved in developing and designing ReactJS &
-                          TypeScript enterprise applications, utilizing various styling
-                          libraries
+                          TypeScript enterprise applications, utilizing various
+                          styling libraries
                         </Text>
                       </ListItem>
                       <ListItem>
@@ -98,8 +99,8 @@ export const Experience = () => {
                       <ListItem>
                         <Text variant="paragraphSecondary" mb="0.2rem">
                           - Developed features for small business websites in
-                          cooperation with two agencies, often
-                          implementing own designs
+                          cooperation with two agencies, often implementing own
+                          designs
                         </Text>
                       </ListItem>
                       <ListItem>

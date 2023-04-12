@@ -13,13 +13,12 @@ export const ThemeToggle = () => {
         "& svg": {
           maxWidth: "22px",
           fill: "mainColorLight",
-          color: "mainColorLight"
+          color: "mainColorLight",
         },
       }}
       h="3.2rem"
       w="3.2rem"
       alignItems="center"
-   
       mt="0.9rem"
       p="0.5rem"
       pl="0.6rem"
@@ -38,14 +37,11 @@ export const ThemeToggle = () => {
       borderColor="grayBorder"
       cursor="pointer"
       zIndex="99999"
-      right="2rem"
-      bottom="2rem"
+      right={{ base: "1.5rem", xl: "2rem"}}
+      bottom={{ base: "1.5rem", xl: "2rem"}}
+      backdropFilter="blur(24px)"
     >
-      {colorMode === "light" ? 
-        <Icon as={SunIcon} />
-       :      
-        <Icon as={MoonIcon} />
-      }
+      {colorMode === "light" ? <Icon as={SunIcon} /> : <Icon as={MoonIcon} />}
     </Flex>
   );
 };

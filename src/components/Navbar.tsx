@@ -194,7 +194,8 @@ export const MobileNavbar = () => {
         position="fixed"
         top="0"
         left="0"
-        px="1.5rem"
+        pr="1.5rem"
+        pl="0.8rem"
         py="0.3rem"
         alignItems="center"
         zIndex="999"
@@ -204,9 +205,9 @@ export const MobileNavbar = () => {
         borderColor="mobileNavbarBorder"
         maxW="100vw"
       >
-        <Flex py="0.5rem">
+        <Link py="0.5rem" href="#home">
           <Image src="/logo.png" alt="" width={120} height={70} />
-        </Flex>
+        </Link>
         <Flex
           w="2.7rem"
           h="3rem"
