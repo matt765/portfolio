@@ -1,7 +1,7 @@
-import { Flex, Link, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Flex, Icon, Link, Text, useColorMode } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { MainLogo } from "@/assets/icons/logo";
 
 interface NavbarItemProps {
   text: string;
@@ -20,7 +20,7 @@ const NavbarItem = ({ text, color, path, isActive }: NavbarItemProps) => (
       fontWeight="400"
       letterSpacing="3px"
       fontSize="0.9rem"
-      color={isActive ? "coloredText" : color}
+      color={isActive ? "mainColor" : color}
       _hover={{
         color: "coloredText",
       }}
@@ -34,6 +34,7 @@ const NavbarItem = ({ text, color, path, isActive }: NavbarItemProps) => (
 
 export const Navbar = () => {
   const [activeItem, setActiveItem] = useState<string>("home");
+  const { colorMode } = useColorMode();
   useEffect(() => {
     const handleScroll = () => {
       const sectionIds = [
@@ -101,7 +102,7 @@ export const Navbar = () => {
       pl="3.5rem"
       bg="primaryBg"
       display={{ base: "none", lg: "flex" }}
-      backdropFilter="blur(24px)"
+      backdropFilter={colorMode === "light" ? "blur(24px)" : ""}
     >
       <motion.div
         initial={{ opacity: 0, y: 10 }}
@@ -111,7 +112,7 @@ export const Navbar = () => {
         <nav>
           <Link href="#home">
             <Flex mb="2rem" ml="-1rem">
-              <Image src="/logo.png" alt="" width={100} height={100} />
+              <Icon as={MainLogo} />
             </Flex>
           </Link>
           <Flex gap="1.5rem" direction="column" alignItems="flex-start">
@@ -155,6 +156,7 @@ const MobileNavbarItem = ({ text, color, path, onClick }: NavbarItemProps) => (
 
 export const MobileNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { colorMode } = useColorMode();
   const mobileNavItems = [
     {
       text: "Home",
@@ -199,14 +201,14 @@ export const MobileNavbar = () => {
         py="0.3rem"
         alignItems="center"
         zIndex="999"
-        backdropFilter="blur(24px)"
+        backdropFilter={colorMode === "light" ? "blur(24px)" : ""}
         borderWidth="0 0 1px 0"
         borderStyle="solid"
         borderColor="mobileNavbarBorder"
         maxW="100vw"
       >
         <Link py="0.5rem" href="#home">
-          <Image src="/logo.png" alt="" width={120} height={70} />
+          <Icon as={MainLogo} />
         </Link>
         <Flex
           w="2.7rem"
@@ -255,7 +257,7 @@ export const MobileNavbar = () => {
             pt="2rem"
             display={{ base: "flex", lg: "none" }}
             zIndex="99"
-            backdropFilter="blur(24px)"
+            backdropFilter={colorMode === "light" ? "blur(24px)" : ""}
           >
             {mobileNavItems.map((mobileNavItem, index) => (
               <MobileNavbarItem

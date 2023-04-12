@@ -12,7 +12,8 @@ export const Hero = () => {
       alignItems="center"
       justify="center"
       id="home"
-      pt={{ base: "8rem", md: "0" }}
+      pt={{ base: "10rem", md: "0" }}
+      mb={{ base: "5rem", md: "0" }}
     >
       <NavigationAnchor id="home" />
       <Flex
@@ -67,7 +68,13 @@ export const Hero = () => {
               </Text>
             </motion.div>
           </Flex>
-          <Link href="#projects" _hover={{ textDecoration: "none" }} w="15rem">
+          <Link
+            href="#projects"
+            _hover={{ textDecoration: "none" }}
+            w="15rem"
+            alignSelf={{ base: "center", sm: "unset" }}
+            mr={{ base: "1rem", sm: "unset" }}
+          >
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

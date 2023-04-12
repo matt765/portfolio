@@ -25,21 +25,21 @@ export const ThemeToggle = () => {
       borderRadius="10px"
       justify="center"
       _hover={{
-        bg: "rgba(106, 111, 121, 0.4)",
+        bg: "#373e48"
       }}
       _active={{
-        bg: "rgba(171, 173, 179, 0.4)",
+        bg: "#373e48"
       }}
       transition="0.3s"
-      bg="secondaryBgHover"
+      bg="themeTogglerBg"
       borderWidth="1px"
       borderStyle="solid"
       borderColor="grayBorder"
       cursor="pointer"
       zIndex="99999"
-      right={{ base: "1.5rem", xl: "2rem"}}
-      bottom={{ base: "1.5rem", xl: "2rem"}}
-      backdropFilter="blur(24px)"
+      right={{ base: "1.5rem", xl: "2rem" }}
+      bottom={{ base: "1.5rem", xl: "2rem" }}
+      backdropFilter={colorMode === "light" ? "blur(24px)" : ""}
     >
       {colorMode === "light" ? <Icon as={SunIcon} /> : <Icon as={MoonIcon} />}
     </Flex>

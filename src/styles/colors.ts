@@ -24,7 +24,7 @@ export const colors = {
     _dark: "rgb(255,255,255,0.95)",
   },
   secondaryText: {
-    default: "rgb(255,255,255,0.7)",
+    default: "rgb(255,255,255,0.85)",
     _dark: "rgb(255,255,255,0.8)",
   },
   coloredText: {
@@ -71,6 +71,10 @@ export const colors = {
     default: "rgb(255,255,255,0.2)",
     _dark: "rgb(255,255,255,0.2)",
   },
+  inputBorderHover: {
+    default: "rgb(64, 184, 182)",
+    _dark: "rgb(49, 151, 149)",
+  },
   githubIcon: {
     default: "rgb(255,255,255,0.9)",
     _dark: "rgb(255,255,255,0.4)",
@@ -80,8 +84,8 @@ export const colors = {
     _dark: "rgb(0,0,0,0)",
   },
   themeTogglerBg: {
-    default: "rgb(60, 64, 71, 0.5)",
-    _dark: "rgb(65, 69, 76)",
+    default: "rgb(255,255,255,0.02)",
+    _dark: "#32363c"
   },
   themeTogglerBorder: {
     default: "rgb(255,255,255,0.10)",

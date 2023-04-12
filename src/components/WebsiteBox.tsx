@@ -1,6 +1,7 @@
-import { Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { Flex, Heading, Link, Text, useColorMode } from "@chakra-ui/react";
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
+
 interface WebsiteBoxProps {
   title: string;
   desc: string;
@@ -24,6 +25,8 @@ export const WebsiteBox = ({
   isLight,
   index,
 }: WebsiteBoxProps) => {
+  const { colorMode } = useColorMode();
+
   return (
     <Flex
       w={{
@@ -73,7 +76,6 @@ export const WebsiteBox = ({
             width: "100%",
           },
         }}
-        backdropFilter="blur(24px)"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -202,7 +204,7 @@ export const WebsiteBox = ({
                 _hover={{ bg: "transparentButtonHover" }}
                 transition="0.2s"
                 isExternal
-                backdropFilter="blur(24px)"
+                backdropFilter={colorMode === "light" ? "blur(24px)" : ""}
               >
                 <Flex
                   w="100%"
