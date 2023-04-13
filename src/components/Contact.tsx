@@ -45,23 +45,30 @@ export const Contact = () => {
       >
         <Flex alignItems="center">
           <Flex
-            w="3rem"
+            w={{ base: "2rem", md: "3rem" }}
             h="1px"
             bg="mainColor"
             mb="1.5rem"
-            mr="2rem"
-            display={{ base: "none", md: "flex" }}
+            mr={{ base: "1rem", md: "2rem" }}
           />
-          <Heading as="h2" mb="2rem">
+          <Heading
+            as="h2"
+            mb="2rem"
+            fontSize={{
+              base: "2rem !important",
+              sm: "2rem !important",
+              md: "2.8rem !important",
+              lg: "3rem !important",
+            }}
+          >
             Contact me
           </Heading>
           <Flex
-            w="3rem"
+            w={{ base: "2rem", md: "3rem" }}
             h="1px"
             bg="mainColor"
             mb="1.5rem"
-            ml="2rem"
-            display={{ base: "none", md: "flex" }}
+            ml={{ base: "1rem", md: "2rem" }}
           />
         </Flex>
       </motion.div>
