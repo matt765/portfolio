@@ -11,7 +11,7 @@ export const Headings = {
   },
   h3: {
     fontWeight: "500 !important",
-    fontSize: "2.2rem !important",
+    fontSize: "2.4rem !important",
   },
   h4: {
     fontWeight: 400,

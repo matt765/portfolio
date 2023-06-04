@@ -131,7 +131,7 @@ export const Contact = () => {
       </form>
       <Flex justify="center" alignItems="center" gap="1.3rem" mt="1.5rem">
         <Link
-          href="https://github.com/matt765/portfolio"
+          href="https://github.com/matt765/"
           isExternal
           width="3rem"
           fill="githubIcon"

@@ -56,7 +56,7 @@ export const WebsiteBox = ({
         borderWidth="0px"
         zIndex="0"
         borderColor="grayBorder"
-        borderRadius="6px"
+        borderRadius="10px"
         overflow="hidden"
         mb={{ base: "1.5rem", md: "0" }}
         cursor="pointer"
@@ -104,7 +104,7 @@ export const WebsiteBox = ({
       <Flex
         direction="column"
         pl={{ base: "0.2rem", md: "0rem" }}
-        w={{ base: "100%", xl: "40%" }}
+        w={{ base: "100%", xl: "45%" }}
         ml={{ base: "0", md: index % 2 == 0 ? "-0rem" : "0rem" }}
       >
         <Flex
@@ -125,7 +125,7 @@ export const WebsiteBox = ({
               fontSize={{
                 base: "1.8rem !important",
                 md: "2rem !important",
-                "2xl": "2rem !important",
+                "2xl": "2.2rem !important",
               }}
             >
               {title}
@@ -139,12 +139,12 @@ export const WebsiteBox = ({
             viewport={{ once: true }}
             transition={{ duration: 0.3 }}
           >
-            <Text variant="paragraphLarge">{desc}</Text>{" "}
+            <Text variant="paragraphLarge">{desc}</Text>
           </motion.div>
         </Flex>
         <Flex
           color="secondaryText"
-          mt="0.7rem"
+          mt="1.2rem"
           fontSize={{ base: "0.9rem", "2xl": "1rem" }}
         >
           <motion.div
@@ -162,7 +162,7 @@ export const WebsiteBox = ({
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
         >
-          <Flex gap="1.2rem" mt="1.3rem">
+          <Flex gap="1.2rem" mt="1.9rem">
             <Link
               w={{ base: "11rem", "2xl": "49%" }}
               h="3rem"

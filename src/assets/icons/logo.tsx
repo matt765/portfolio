@@ -7,7 +7,7 @@ export const MainLogo = () => (
     width="103px"
     height="66px"
     viewBox="0 0 103 66"
-    enable-background="new 0 0 103 66"
+    enableBackground="new 0 0 103 66"
   >
     <image
       id="image0"

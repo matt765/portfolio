@@ -63,7 +63,7 @@ export const Hero = () => {
                 fontSize={{ base: "1rem", xl: "1.1rem" }}
               >
                 I strive to deliver user experiences that are both aesthetically
-                pleasing and intuitive, creating scalable applications and
+                pleasing and intuitive, creating applications and
                 websites consistent with industry standards.
               </Text>
             </motion.div>

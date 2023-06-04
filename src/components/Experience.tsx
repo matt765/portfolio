@@ -61,14 +61,14 @@ export const Experience = () => {
                     >
                       <ListItem>
                         <Text variant="paragraphSecondary" mb="0.2rem">
-                          - Involved in developing and designing ReactJS &
+                          - Participated in developing and designing ReactJS &
                           TypeScript enterprise applications, utilizing various
                           styling libraries
                         </Text>
                       </ListItem>
                       <ListItem>
                         <Text variant="paragraphSecondary" mb="0.2rem">
-                          - Worked in agile methodology, participating in a team
+                          - Worked in agile methodology, contributing to a team
                           environment via GitHub and Gitlab
                         </Text>
                       </ListItem>

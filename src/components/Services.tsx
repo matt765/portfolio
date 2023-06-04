@@ -18,7 +18,7 @@ interface ServicesBoxProps {
 const servicesData = [
   {
     title: "ReactJS applications",
-    text: "Specializing in ReactJS, Typescript and NextJS, I build high-quality web applications that are tailored to your needs.",
+    text: "Specializing in ReactJS, Typescript and NextJS, I build high-quality web applications, with strong focus on clean and efficient code.",
     logoArray: [ReactLogo, TypescriptLogo],
   },
   {

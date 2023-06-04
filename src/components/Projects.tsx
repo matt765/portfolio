@@ -1,44 +1,46 @@
 import { Flex } from "@chakra-ui/react";
 
 import TailcastImage from "../assets/images/tailcast.png";
-import CoinstackImage from "../assets/images/paysafenow.png";
-import InnovateImage from "../assets/images/innovate.png";
-import FoodhubImage from "../assets/images/foodhub.png";
+import FourWebsitesImage from "../assets/images/4w.png";
+import DaydashImage from "../assets/images/daydash.png";
+import AppsImage from "../assets/images/tsapps.png";
 import { WebsiteBox } from "./WebsiteBox";
 import { SectionTitle } from "./SectionTitle";
 import { NavigationAnchor } from "./NavigationAnchor";
 
 const projectsData = [
+ 
+  {
+    title: "DayDash.app",
+    desc: "Dashboard application designed to be an alternative to default starting page in a browser",
+    techStack: "React, TypeScript, ChakraUI",
+    liveLink: "https://www.daydash.app/",
+    codeLink: "https://github.com/matt765/daydash",
+    image: DaydashImage,
+  },
   {
     title: "Tailcast",
-    desc: "Dark themed website template built on AstroJS, designed for SaaS startup.",
+    desc: "Dark themed website template built on AstroJS, designed for SaaS business.",
     techStack: "Astro, React, Tailwind",
     liveLink: "https://tailcast.vercel.app/",
     codeLink: "https://github.com/matt765/Tailcast",
     image: TailcastImage,
   },
   {
-    title: "InnoVate",
-    desc: "Website for interior design company, created using client-first design rules",
-    techStack: "Webflow",
-    liveLink: "https://innovate-interior.vercel.app/",
-    previewLink:
-      "https://preview.webflow.com/preview/innovate-interior?utm_medium=preview_link&utm_source=designer&utm_content=innovate-interior&preview=a7b8553f8c91a11c0d12c3876699a7a4&workflow=preview",
-    image: InnovateImage,
+    title: "4 Websites",
+    desc: "Few more static websites of mine, combined along with Tailcast into simple showcase application",
+    techStack: "React, NextJS, Styled Components, SwiperJS",
+    liveLink: "https://4-websites.vercel.app/",
+    codeLink: "https://github.com/matt765/4-websites",
+    image: FourWebsitesImage,
   },
   {
-    title: "GreenHub",
-    desc: "Healthy and organic food restaurant website with lots of images and vivid color palette",
-    techStack: "HTML, CSS, JS, Shuffle.dev",
-    liveLink: "https://greenhubfoods.vercel.app/",
-    image: FoodhubImage,
-  },
-  {
-    title: "PaySafeNow",
-    desc: "Example of a website template for a startup that offers safe online payment solutions",
-    techStack: "Webflow",
-    liveLink: "https://paysafenow.vercel.app/",
-    image: CoinstackImage,
+    title: "TypeScript Apps",
+    desc: "Open source collection of small applications written in ReactJS and TypeScript.",
+    techStack: "React, TypeScript, ChakraUI",
+    liveLink: "https://typescriptapps.netlify.app/",
+    codeLink: "https://github.com/matt765/typescript-apps",
+    image: AppsImage,
     isLight: true,
   },
 ];
