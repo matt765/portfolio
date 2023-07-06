@@ -62,8 +62,8 @@ export const Hero = () => {
                 maxW="35rem"
                 fontSize={{ base: "1rem", xl: "1.1rem" }}
               >
-                I strive to deliver user experiences that are both aesthetically
-                pleasing and intuitive, creating applications and
+                I strive to deliver user experiences that are both intuitive and aesthetically
+                pleasing, creating applications and
                 websites consistent with industry standards.
               </Text>
             </motion.div>

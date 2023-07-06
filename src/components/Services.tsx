@@ -23,7 +23,7 @@ const servicesData = [
   },
   {
     title: "Handcoded websites",
-    text: "Scalable websites optimized for performance and accessibility, created with AstroJS, Tailwind or Chakra UI  ",
+    text: "Scalable websites optimized for performance and accessibility, created with AstroJS, Tailwind or your library of choice",
     logoArray: [AstroLogo, TailwindLogo],
   },
   {

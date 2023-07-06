@@ -62,8 +62,7 @@ export const Experience = () => {
                       <ListItem>
                         <Text variant="paragraphSecondary" mb="0.2rem">
                           - Participated in developing and designing ReactJS &
-                          TypeScript enterprise applications, utilizing various
-                          styling libraries
+                          TypeScript enterprise applications
                         </Text>
                       </ListItem>
                       <ListItem>

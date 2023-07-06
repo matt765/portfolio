@@ -4,6 +4,7 @@ import TailcastImage from "../assets/images/tailcast.png";
 import FourWebsitesImage from "../assets/images/4w.png";
 import DaydashImage from "../assets/images/daydash.png";
 import AppsImage from "../assets/images/tsapps.png";
+import FrontEndQuestionsImage from "../assets/images/frontendquestions.png";
 import { WebsiteBox } from "./WebsiteBox";
 import { SectionTitle } from "./SectionTitle";
 import { NavigationAnchor } from "./NavigationAnchor";
@@ -41,6 +42,15 @@ const projectsData = [
     liveLink: "https://typescriptapps.netlify.app/",
     codeLink: "https://github.com/matt765/typescript-apps",
     image: AppsImage,
+    isLight: true,
+  },
+  {
+    title: "Front-End Questions",
+    desc: "Open source application that contains base of front-end related interview questions.",
+    techStack: "React, TypeScript, MantineUI",
+    liveLink: "https://front-end-questions.vercel.app/",
+    codeLink: "https://github.com/matt765/front-end-questions",
+    image: FrontEndQuestionsImage,
     isLight: true,
   },
 ];
